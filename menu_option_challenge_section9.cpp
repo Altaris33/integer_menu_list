@@ -141,6 +141,12 @@ int main() {
         case 'S':
         case 's':
         {
+            if (numbers.empty()) 
+            {
+                 cout << "Unable to determine smallest number, no data in the list" << endl;
+                 break;
+            }
+
             // get smallest value from the vector
             int proxyNumber {};
             for (int i = 0; i < numbers.size() - 1; i++)
@@ -162,9 +168,14 @@ int main() {
         case 'L':
         case 'l':
         {
+            if (numbers.empty()) 
+            {
+                 cout << "Unable to determine highest number, no data in the list" << endl;
+                 break;
+            }
+
             // get highest value from the vector
             int proxyNumber {};
-            int smallestNumber {};
             for (int i = 0; i < numbers.size() - 1; i++)
             {
                 if (numbers[i] > numbers[i + 1])
